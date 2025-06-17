@@ -12,7 +12,7 @@ public class Character {
 		
 	}
 	
-	public void movw() {
+	public void move() {
 		
 		x += vx;
 		y += vy;
