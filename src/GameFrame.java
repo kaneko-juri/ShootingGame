@@ -17,6 +17,8 @@ public class GameFrame extends MyFrame{
 			
 			clear();
 			
+			
+			
 			GameWorld.player.draw(this);
 			GameWorld.player.move();
 			
@@ -65,8 +67,6 @@ public class GameFrame extends MyFrame{
 			e.move();
 			
 		}
-		
-		
 		
 	}
 
