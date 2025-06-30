@@ -44,6 +44,13 @@ public Player(double x, double y, double vx, double vy) {
 			
 		}
 		
+		if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+			
+			System.out.println("Enterキーが押されました");
+			GameWorld.enterPressed = true;
+			
+		}
+		
 	}
 	
 	public void keyReleased(KeyEvent e) {
