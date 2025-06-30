@@ -11,8 +11,13 @@ public class EnemyBase extends Enemy{
 	public void move() {
 		
 		super.move();
-		if (x > 300) vx = GameWorld.stage;
-		if (x < 100) vx = GameWorld.stage;
+		
+		int leftLimit = 0;
+		int rightLimit = 370;
+		
+		
+		if (x > rightLimit) vx = -Math.abs(GameWorld.stage);
+		if (x < leftLimit) vx = Math.abs(GameWorld.stage);
 		
 		if (Math.random() < 0.01) {
 			

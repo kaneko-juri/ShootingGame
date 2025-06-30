@@ -7,6 +7,18 @@ public class StraightEnemy extends Enemy{
 		life = 5;
 		
 	}
+	
+	public void move() {
+		
+		super.move();
+		
+		int leftLimit = 0;
+		int rightLimit = 370;
+		
+		if(x < leftLimit) x = leftLimit;
+		if(x > rightLimit) x = rightLimit;
+		
+	}
 
 	public void draw (MyFrame f) {
 		

@@ -1,15 +1,23 @@
 
 public class CurveEnemy extends Enemy{
+	
+	private double angle = 0;
 
 	public CurveEnemy(double x, double y, double vx, double vy) {
 		
 		super(x, y, vx, vy);
-		life = 3;
+		life = 2 + GameWorld.stage;
+		score = 8;
+		
 	}
 
 	public void move() {
 		
 		super.move();
+		
+		angle += 0.1;
+		x += Math.sin(angle) * GameWorld.stage;
+		y += vy;
 		
 		//自分がプレイヤーよりも左にいたら
 		if (x < GameWorld.player.x) {
@@ -26,6 +34,12 @@ public class CurveEnemy extends Enemy{
 			x--;
 			
 		}
+		
+		int leftLimit = 0;
+		int rightLimit = 370;
+		
+		if (x < leftLimit) x = leftLimit;
+		if (x > rightLimit) x = rightLimit;
 		
 	}
 	
