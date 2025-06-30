@@ -42,15 +42,23 @@ public class GameFrame extends MyFrame{
 				
 				if (GameWorld.enemies.size() == 0) {
 					
-					setColor(0,0,0);
-					drawString("クリア!", 100, 200, 40);
+					clear();
 					
-					if (GameWorld.enterPressed) {
-						
-						GameWorld.stage++;
-						break;
-						
-					}
+					setColor(0, 0, 0);
+					drawString("ステージ" + GameWorld.stage + "クリア!", 80, 200, 30);
+					
+					sleep(1.5);
+					
+					GameWorld.stage++;
+					
+					clear();
+					
+					setColor(0, 0, 0);
+					drawString("ステージ" + GameWorld.stage, 100, 200, 30);
+					
+					sleep(1.5);
+					
+					break;
 					
 				} else if (GameWorld.player.y < 0) {
 					
