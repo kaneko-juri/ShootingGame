@@ -45,9 +45,9 @@ public class CurveEnemy extends Enemy{
 	
 	public void draw (MyFrame f) {
 		
-		f.setColor(0, 0, 0);
+		f.setColor(147, 112, 219);
 		f.fillOval(x, y, 30, 30);
-		f.setColor(143, 188, 143);
+		f.setColor(175, 238, 238);
 		f.fillOval(x+5, y, 20, 30);
 		
 	}

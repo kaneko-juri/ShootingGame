@@ -42,13 +42,19 @@ public class EnemyBase extends Enemy{
 			GameWorld.enemies.add(new CurveEnemy(x, y, 0, GameWorld.stage));
 			
 		}
+		
+		if (Math.random() < 0.01) {
+			
+			GameWorld.enemies.add(new SplitEnemy(x, y, 0, 1+GameWorld.stage * 0.3));
+			
+		}
 	}
 	
 	public void draw (MyFrame f) {
 		
-		f.setColor(0, 225, 225);
+		f.setColor(75, 0, 130);
 		f.fillOval(x, y, 32, 32);
-		f.setColor(200, 200, 200);
+		f.setColor(127, 255, 212);
 		f.fillOval(x-16, y+8, 64, 16);
 			
 	}

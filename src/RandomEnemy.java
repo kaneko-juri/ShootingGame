@@ -18,11 +18,11 @@ public class RandomEnemy extends Enemy{
 	
 	public void draw (MyFrame f) {
 		
-		f.setColor(0, 0, 255);
+		f.setColor(64, 224, 208);
 		f.fillRect(x, y, 10, 20);
-		f.setColor(0, 0, 255);
+		f.setColor(64, 224, 208);
 		f.fillRect(x+10, y+20, 10, 10);
-		f.setColor(0, 0, 255);
+		f.setColor(64, 64, 208);
 		f.fillRect(x+20, y, 10, 20);
 		
 	}

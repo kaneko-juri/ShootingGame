@@ -189,7 +189,17 @@ public class GameFrame extends MyFrame{
 				if (e.life <= 0) {
 					
 					GameWorld.score += e.score;
+					
+					if(e instanceof SplitEnemy) {
+						
+						GameWorld.enemies.add(new MiniEnemy(e.x-10, e.y-10, -1, 2));
+						GameWorld.enemies.add(new MiniEnemy(e.x, e.y-10, 0, 2));
+						GameWorld.enemies.add(new MiniEnemy(e.x+10, e.y-10, 1, 2));
+						
+					}
+					
 					GameWorld.enemies.remove(j);
+					
 					
 				} else {
 					
